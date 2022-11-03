@@ -64,6 +64,7 @@
             this.Btn_SalvarLivro = new System.Windows.Forms.Button();
             this.Txt_Titulo2 = new System.Windows.Forms.TextBox();
             this.Btn_Voltaradc = new System.Windows.Forms.Button();
+            this.Lbl_cifrao = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -100,7 +101,7 @@
             this.toolStripSeparator1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 33);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1444, 33);
+            this.toolStrip1.Size = new System.Drawing.Size(850, 33);
             this.toolStrip1.TabIndex = 9;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -150,7 +151,7 @@
             this.ajudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1444, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(850, 33);
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -355,9 +356,9 @@
             // Msk_ValorLivro
             // 
             this.Msk_ValorLivro.Location = new System.Drawing.Point(228, 360);
-            this.Msk_ValorLivro.Mask = "$ 000,00";
+            this.Msk_ValorLivro.Mask = "000,00";
             this.Msk_ValorLivro.Name = "Msk_ValorLivro";
-            this.Msk_ValorLivro.Size = new System.Drawing.Size(182, 31);
+            this.Msk_ValorLivro.Size = new System.Drawing.Size(73, 31);
             this.Msk_ValorLivro.TabIndex = 33;
             // 
             // Lbl_Autor
@@ -410,7 +411,7 @@
             // Btn_SalvarLivro
             // 
             this.Btn_SalvarLivro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Btn_SalvarLivro.Location = new System.Drawing.Point(12, 729);
+            this.Btn_SalvarLivro.Location = new System.Drawing.Point(13, 561);
             this.Btn_SalvarLivro.Name = "Btn_SalvarLivro";
             this.Btn_SalvarLivro.Size = new System.Drawing.Size(179, 65);
             this.Btn_SalvarLivro.TabIndex = 39;
@@ -420,7 +421,7 @@
             // 
             // Txt_Titulo2
             // 
-            this.Txt_Titulo2.Location = new System.Drawing.Point(227, 69);
+            this.Txt_Titulo2.Location = new System.Drawing.Point(228, 76);
             this.Txt_Titulo2.Name = "Txt_Titulo2";
             this.Txt_Titulo2.Size = new System.Drawing.Size(544, 31);
             this.Txt_Titulo2.TabIndex = 40;
@@ -429,7 +430,7 @@
             // Btn_Voltaradc
             // 
             this.Btn_Voltaradc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Btn_Voltaradc.Location = new System.Drawing.Point(1253, 729);
+            this.Btn_Voltaradc.Location = new System.Drawing.Point(593, 561);
             this.Btn_Voltaradc.Name = "Btn_Voltaradc";
             this.Btn_Voltaradc.Size = new System.Drawing.Size(179, 65);
             this.Btn_Voltaradc.TabIndex = 41;
@@ -437,12 +438,23 @@
             this.Btn_Voltaradc.UseVisualStyleBackColor = true;
             this.Btn_Voltaradc.Click += new System.EventHandler(this.Btn_Voltaradc_Click);
             // 
+            // Lbl_cifrao
+            // 
+            this.Lbl_cifrao.AutoSize = true;
+            this.Lbl_cifrao.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Lbl_cifrao.Location = new System.Drawing.Point(192, 360);
+            this.Lbl_cifrao.Name = "Lbl_cifrao";
+            this.Lbl_cifrao.Size = new System.Drawing.Size(35, 28);
+            this.Lbl_cifrao.TabIndex = 42;
+            this.Lbl_cifrao.Text = "R$";
+            // 
             // Frm_AdicionarLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1444, 956);
+            this.ClientSize = new System.Drawing.Size(850, 715);
+            this.Controls.Add(this.Lbl_cifrao);
             this.Controls.Add(this.Btn_Voltaradc);
             this.Controls.Add(this.Txt_Titulo2);
             this.Controls.Add(this.Btn_SalvarLivro);
@@ -519,5 +531,6 @@
         private Button Btn_SalvarLivro;
         private TextBox Txt_Titulo2;
         private Button Btn_Voltaradc;
+        private Label Lbl_cifrao;
     }
 }

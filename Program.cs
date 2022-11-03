@@ -14,11 +14,11 @@ namespace RepositorioLivros
             ApplicationConfiguration.Initialize();
             Application.Run(new MyBook());
 
-            StreamWriter x;
+            //StreamWriter x;
 
-            string CaminhoNome = "C:\\Users\\gabriel.mendonca\\Desktop\\arq01.txt";
+            //string CaminhoNome = "C:\\Users\\gabriel.mendonca\\Desktop\\arq01.txt";
 
-            x = File.CreateText(CaminhoNome);
+           // x = File.CreateText(CaminhoNome);
 
         }
     }

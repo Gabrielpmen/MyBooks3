@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gabriel.mendonca\\source\\repos\\RepositorioLivros\\RepositorioLivros.csproj": {}
+    "C:\\Users\\gabriel.mendonca\\Desktop\\RepositorioLivros\\RepositorioLivros.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gabriel.mendonca\\source\\repos\\RepositorioLivros\\RepositorioLivros.csproj": {
+    "C:\\Users\\gabriel.mendonca\\Desktop\\RepositorioLivros\\RepositorioLivros.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabriel.mendonca\\source\\repos\\RepositorioLivros\\RepositorioLivros.csproj",
+        "projectUniqueName": "C:\\Users\\gabriel.mendonca\\Desktop\\RepositorioLivros\\RepositorioLivros.csproj",
         "projectName": "RepositorioLivros",
-        "projectPath": "C:\\Users\\gabriel.mendonca\\source\\repos\\RepositorioLivros\\RepositorioLivros.csproj",
+        "projectPath": "C:\\Users\\gabriel.mendonca\\Desktop\\RepositorioLivros\\RepositorioLivros.csproj",
         "packagesPath": "C:\\Users\\gabriel.mendonca\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabriel.mendonca\\source\\repos\\RepositorioLivros\\obj\\",
+        "outputPath": "C:\\Users\\gabriel.mendonca\\Desktop\\RepositorioLivros\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

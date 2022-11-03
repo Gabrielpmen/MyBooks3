@@ -69,8 +69,8 @@ namespace RepositorioLivros
 
             if (Txt_Titulo2.Text == "" || Cbx_Genero.Text == "" || Cbx_Midia.Text == "" || Cbx_AnoLancamento.Text == "" || Cbx_StatusLeitura.Text == "" || Cbx_AnoAquisicao.Text == "" || Msk_ValorLivro.Text == "" || Txt_Autor.Text == "") 
             {
-                MessageBox.Show("Ainda existem campos à serem preenchidos!", "Erro",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ainda existem campos à serem preenchidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
             else
             {
@@ -87,6 +87,9 @@ namespace RepositorioLivros
                 Cbx_AnoAquisicao.Text = null;
                 Msk_ValorLivro.Text = null;
                 Txt_Autor.Text = null;
+
+
+                MessageBox.Show("Dados salvos com sucesso!", "Salvo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             
             
