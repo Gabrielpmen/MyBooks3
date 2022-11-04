@@ -50,6 +50,7 @@
             resources.ApplyResources(this.Btn_ConsultaLivros, "Btn_ConsultaLivros");
             this.Btn_ConsultaLivros.Name = "Btn_ConsultaLivros";
             this.Btn_ConsultaLivros.UseVisualStyleBackColor = true;
+            this.Btn_ConsultaLivros.Click += new System.EventHandler(this.Btn_ConsultaLivros_Click);
             // 
             // Lbl_MeusLivros
             // 

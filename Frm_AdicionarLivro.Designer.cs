@@ -34,7 +34,6 @@
             this.Lbl_Genero = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.novaToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.abrirToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.salvarToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -95,7 +94,6 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.novaToolStripButton,
-            this.abrirToolStripButton,
             this.salvarToolStripButton,
             this.toolStripSeparator,
             this.toolStripSeparator1});
@@ -113,15 +111,7 @@
             this.novaToolStripButton.Name = "novaToolStripButton";
             this.novaToolStripButton.Size = new System.Drawing.Size(34, 28);
             this.novaToolStripButton.Text = "&Nova";
-            // 
-            // abrirToolStripButton
-            // 
-            this.abrirToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.abrirToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("abrirToolStripButton.Image")));
-            this.abrirToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.abrirToolStripButton.Name = "abrirToolStripButton";
-            this.abrirToolStripButton.Size = new System.Drawing.Size(34, 28);
-            this.abrirToolStripButton.Text = "&Abrir";
+            this.novaToolStripButton.Click += new System.EventHandler(this.novaToolStripButton_Click);
             // 
             // salvarToolStripButton
             // 
@@ -131,6 +121,7 @@
             this.salvarToolStripButton.Name = "salvarToolStripButton";
             this.salvarToolStripButton.Size = new System.Drawing.Size(34, 28);
             this.salvarToolStripButton.Text = "&Salvar";
+            this.salvarToolStripButton.Click += new System.EventHandler(this.salvarToolStripButton_Click);
             // 
             // toolStripSeparator
             // 
@@ -501,7 +492,6 @@
         private Label Lbl_Genero;
         private ToolStrip toolStrip1;
         private ToolStripButton novaToolStripButton;
-        private ToolStripButton abrirToolStripButton;
         private ToolStripButton salvarToolStripButton;
         private ToolStripSeparator toolStripSeparator;
         private ToolStripSeparator toolStripSeparator1;

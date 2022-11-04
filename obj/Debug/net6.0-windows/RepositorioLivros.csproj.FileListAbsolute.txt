@@ -38,3 +38,4 @@ C:\Users\gabriel.mendonca\Desktop\RepositorioLivros\obj\Debug\net6.0-windows\ref
 C:\Users\gabriel.mendonca\Desktop\RepositorioLivros\obj\Debug\net6.0-windows\RepositorioLivros.pdb
 C:\Users\gabriel.mendonca\Desktop\RepositorioLivros\obj\Debug\net6.0-windows\RepositorioLivros.genruntimeconfig.cache
 C:\Users\gabriel.mendonca\Desktop\RepositorioLivros\obj\Debug\net6.0-windows\ref\RepositorioLivros.dll
+C:\Users\gabriel.mendonca\Desktop\RepositorioLivros\obj\Debug\net6.0-windows\RepositorioLivros.Frm_ConsultaLivro.resources

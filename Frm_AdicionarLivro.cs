@@ -109,6 +109,46 @@ namespace RepositorioLivros
         {
             this.Close();
         }
+
+        private void salvarToolStripButton_Click(object sender, EventArgs e)
+        {
+            if (Txt_Titulo2.Text == "" || Cbx_Genero.Text == "" || Cbx_Midia.Text == "" || Cbx_AnoLancamento.Text == "" || Cbx_StatusLeitura.Text == "" || Cbx_AnoAquisicao.Text == "" || Msk_ValorLivro.Text == "" || Txt_Autor.Text == "")
+            {
+                MessageBox.Show("Ainda existem campos à serem preenchidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+                string midia = Cbx_Midia.Text;
+                string anolancamento = Cbx_AnoLancamento.Text;
+                string esaga = Chkb_SagaS.Text;
+                CadastroLivro.cadastraolivro(Txt_Titulo2.Text, Cbx_Genero.Text, midia, anolancamento, Cbx_StatusLeitura.Text, Cbx_AnoAquisicao.Text, Msk_ValorLivro.Text, Txt_Autor.Text, esaga);
+
+                Txt_Titulo2.Text = null;
+                Cbx_Genero.Text = null;
+                Cbx_Midia.Text = null;
+                Cbx_AnoLancamento.Text = null;
+                Cbx_StatusLeitura.Text = null;
+                Cbx_AnoAquisicao.Text = null;
+                Msk_ValorLivro.Text = null;
+                Txt_Autor.Text = null;
+
+
+                MessageBox.Show("Dados salvos com sucesso!", "Salvo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void novaToolStripButton_Click(object sender, EventArgs e)
+        {
+            Txt_Titulo2.Text = null;
+            Cbx_Genero.Text = null;
+            Cbx_Midia.Text = null;
+            Cbx_AnoLancamento.Text = null;
+            Cbx_StatusLeitura.Text = null;
+            Cbx_AnoAquisicao.Text = null;
+            Msk_ValorLivro.Text = null;
+            Txt_Autor.Text = null;
+        }
     }
     
     }

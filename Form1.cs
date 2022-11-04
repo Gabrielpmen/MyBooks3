@@ -17,5 +17,11 @@ namespace RepositorioLivros
         {
             this.Close();
         }
+
+        private void Btn_ConsultaLivros_Click(object sender, EventArgs e)
+        {
+            Frm_ConsultaLivro f = new Frm_ConsultaLivro();
+            f.ShowDialog();
+        }
     }
 }
