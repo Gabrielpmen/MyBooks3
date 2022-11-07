@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RepositorioLivros.Entities;
+using Newtonsoft.Json;
+
 
 namespace RepositorioLivros
 {
@@ -75,9 +77,21 @@ namespace RepositorioLivros
             else
             {
                 string midia = Cbx_Midia.Text;
-                string anolancamento = Cbx_AnoLancamento.Text;
+                string anolancamento =  Cbx_AnoLancamento.Text;
                 string esaga = Chkb_SagaS.Text;
-                CadastroLivro.cadastraolivro(Txt_Titulo2.Text, Cbx_Genero.Text, midia, anolancamento, Cbx_StatusLeitura.Text, Cbx_AnoAquisicao.Text, Msk_ValorLivro.Text, Txt_Autor.Text, esaga);
+                string titulo = Txt_Titulo2.Text;
+                string genero = Cbx_Genero.Text;
+                string statusLeitura = Cbx_StatusLeitura.Text;
+                string anoAquisicao = Cbx_AnoAquisicao.Text;
+                double valorLivro = double.Parse(Msk_ValorLivro.Text);
+                string autor = Txt_Autor.Text;
+
+                //CadastroLivro.cadastraolivro(Txt_Titulo2.Text, Cbx_Genero.Text, midia, anolancamento, Cbx_StatusLeitura.Text, Cbx_AnoAquisicao.Text, Msk_ValorLivro.Text, Txt_Autor.Text, esaga);
+
+                var cadastro = new CadastroLivro(titulo, genero, midia, anolancamento, statusLeitura, anoAquisicao, valorLivro, autor, esaga);
+                MessageBox.Show(cadastro.JsonSerializar(cadastro));
+                MessageBox.Show("Dados salvos com sucesso!", "Salvo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
 
                 Txt_Titulo2.Text = null;
                 Cbx_Genero.Text = null;
@@ -88,8 +102,7 @@ namespace RepositorioLivros
                 Msk_ValorLivro.Text = null;
                 Txt_Autor.Text = null;
 
-
-                MessageBox.Show("Dados salvos com sucesso!", "Salvo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                
             }
             
             

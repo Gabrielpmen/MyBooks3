@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "4m9rJlsh1hO3w5DbNwxbaJtSE3mqg2IBw64QAm5HPGKAh0IekIG51DVAbdycJjIdkiJlN6Kg4AEacPRI6ADgfA==",
+  "dgSpecHash": "tSdPPmGky7YVeyjg1rZC6oXpKVBnz680OOc9giqTj9cDFBtA4irrp6GG0JALl/iZPAZ0JhjAG7m3xG8j/BaiXQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\gabriel.mendonca\\Desktop\\RepositorioLivros\\RepositorioLivros.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\gabriel.mendonca\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512",
+    "C:\\Users\\gabriel.mendonca\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

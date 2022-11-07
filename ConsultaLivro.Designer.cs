@@ -82,6 +82,7 @@
             this.Cl_ValorPago,
             this.Cl_Autor,
             this.Cl_Emprestado});
+            this.Ltv_BdLivros.FullRowSelect = true;
             this.Ltv_BdLivros.GridLines = true;
             this.Ltv_BdLivros.Location = new System.Drawing.Point(70, 417);
             this.Ltv_BdLivros.MultiSelect = false;
@@ -168,6 +169,7 @@
             this.Btn_Pesquisar.TabIndex = 4;
             this.Btn_Pesquisar.Text = "Pesquisar";
             this.Btn_Pesquisar.UseVisualStyleBackColor = true;
+            this.Btn_Pesquisar.Click += new System.EventHandler(this.Btn_Pesquisar_Click);
             // 
             // Lbl_GeneroCL
             // 

@@ -31,5 +31,10 @@ namespace RepositorioLivros
         {
 
         }
+
+        private void Btn_Pesquisar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

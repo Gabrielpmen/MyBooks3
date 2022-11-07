@@ -8,7 +8,7 @@ namespace RepositorioLivros.Entities
 {
     internal class LivroFisico : CadastroLivro
     {
-        public LivroFisico(string titulo, string genero, string midia, DateTime anoLancamento, string statusLeitura, DateTime anoCompra, double valorPago, string autor, bool esaga) : base(titulo, genero, midia, anoLancamento, statusLeitura, anoCompra, valorPago, autor, esaga,path)
+        public LivroFisico(string titulo, string genero, string midia, string anoLancamento, string statusLeitura, string anoCompra, double valorPago, string autor, string esaga) : base(titulo, genero, midia, anoLancamento, statusLeitura, anoCompra, valorPago, autor, esaga)
         {
         }
     }
