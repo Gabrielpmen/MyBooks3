@@ -37,7 +37,7 @@ namespace RepositorioLivros
 
         private void Btn_Pesquisar_Click(object sender, EventArgs e)
         {
-            var lista = CadastroLivro.JsonDesserializarLista(@"C:\Users\gabriel.mendonca\Desktop\arquivo.json");
+            var lista = CadastroLivro.JsonDesserializarLista(@"C:\REPOS\arq.txt");
             
 
             dataGridView1.DataSource = lista;

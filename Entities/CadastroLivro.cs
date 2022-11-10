@@ -49,7 +49,7 @@ namespace RepositorioLivros.Entities
 
         public string JsonSerializar ( CadastroLivro cadastrolivro)
         {
-            return JsonConvert.SerializeObject(cadastrolivro);
+            return JsonConvert.SerializeObject(cadastrolivro, Formatting.Indented);
         }
         public static CadastroLivro Jsondesserializar(string Json)
         {
@@ -66,7 +66,7 @@ namespace RepositorioLivros.Entities
 
             //File.AppendAllText(@"C:\\Users\\gabriel.mendonca\\Desktop\\arq01.txt", titulo + "," + genero + "," + midia + "," + anoLancamento + "," + statusLeitura + "," + anoCompra + "," + valorPago + "," + autor + "," + esaga + Environment.NewLine);
 
-            StreamWriter sw = new StreamWriter("C:\\Users\\gabriel.mendonca\\Desktop\\arq01.txt", true, Encoding.ASCII);
+            StreamWriter sw = new StreamWriter(@"C:\REPOS\arq.txt", true, Encoding.ASCII);
 
 
 
@@ -79,20 +79,12 @@ namespace RepositorioLivros.Entities
 
 
         }
-        static public void AdicionaLivro(string cadastro)
-        {
-            List<string> listaLivros = new List<string>();
-
-
-            listaLivros.Add(cadastro);
-
-       
-
-        }
+        
 
         public bool JsonSerializarLista(List<CadastroLivro> listaLivros, string path)
         {
             var strJson = JsonConvert.SerializeObject(listaLivros, Formatting.Indented);
+
             return SaveFileEmpresa(strJson, path);
         }
         public static string OpenFileEmpresa(string path)
@@ -116,9 +108,8 @@ namespace RepositorioLivros.Entities
         {
             var strJson = OpenFileEmpresa(path);
             var listaLivros = new List<CadastroLivro>();
-            var cadastro = new CadastroLivro();
-            cadastro.Titulo = strJson;
-            listaLivros.Add(cadastro);
+            var livro = JsonConvert.DeserializeObject<CadastroLivro>(strJson);
+            listaLivros.Add(livro);
             return listaLivros;
         }
 

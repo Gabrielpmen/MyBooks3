@@ -95,14 +95,16 @@ namespace RepositorioLivros
 
                 
 
-                StreamWriter sw = new StreamWriter(@"C:\Users\gabriel.mendonca\Desktop\arquivo.json");
+                StreamWriter sw = new StreamWriter(@"C:\REPOS\arq.txt");
                 sw.WriteLine(cadastro.JsonSerializar(cadastro));
+                sw.WriteLine()
+                listaLivros.Add(cadastro);
                 sw.Close();
                 MessageBox.Show(cadastro.JsonSerializar(cadastro));
 
                 
 
-                listaLivros.Add(cadastro);
+                
 
 
                 
