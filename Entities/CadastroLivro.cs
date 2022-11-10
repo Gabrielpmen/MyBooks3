@@ -55,6 +55,7 @@ namespace RepositorioLivros.Entities
         {
             return JsonConvert.DeserializeObject<CadastroLivro>(Json);
         }
+        
 
 
 
@@ -78,18 +79,50 @@ namespace RepositorioLivros.Entities
 
 
         }
-        static public void AdicionaLivro(string titulo, string genero, string midia, string anoLancamento, string statusLeitura, string anoCompra, string valorPago, string autor, string esaga)
+        static public void AdicionaLivro(string cadastro)
         {
             List<string> listaLivros = new List<string>();
 
 
-            listaLivros.Add(titulo + genero + midia + anoLancamento + statusLeitura + anoCompra + valorPago + autor);
+            listaLivros.Add(cadastro);
 
        
 
         }
 
-        
+        public bool JsonSerializarLista(List<CadastroLivro> listaLivros, string path)
+        {
+            var strJson = JsonConvert.SerializeObject(listaLivros, Formatting.Indented);
+            return SaveFileEmpresa(strJson, path);
+        }
+        public static string OpenFileEmpresa(string path)
+        {
+            var strJson = "";
+            using (StreamReader sr = new StreamReader(path))
+            {
+                strJson = sr.ReadToEnd();
+            }
+            return strJson;
+        }
+        private bool SaveFileEmpresa(string strJson, string path)
+        {
+            using (StreamWriter sw = new StreamWriter(path))
+            {
+                sw.WriteLine(strJson);
+            }
+            return true;
+        }
+        public static List<CadastroLivro> JsonDesserializarLista(string path)
+        {
+            var strJson = OpenFileEmpresa(path);
+            var listaLivros = new List<CadastroLivro>();
+            var cadastro = new CadastroLivro();
+            cadastro.Titulo = strJson;
+            listaLivros.Add(cadastro);
+            return listaLivros;
+        }
+
+
 
 
     }

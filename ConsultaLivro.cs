@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using RepositorioLivros.Entities;
+
 
 namespace RepositorioLivros
 {
@@ -34,7 +37,24 @@ namespace RepositorioLivros
 
         private void Btn_Pesquisar_Click(object sender, EventArgs e)
         {
+            var lista = CadastroLivro.JsonDesserializarLista(@"C:\Users\gabriel.mendonca\Desktop\arquivo.json");
+            
+
+            dataGridView1.DataSource = lista;
+        }
+
+        private void Ltv_BdLivros_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+
+                
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
-}
+    }
+

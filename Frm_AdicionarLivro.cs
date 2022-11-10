@@ -15,6 +15,7 @@ namespace RepositorioLivros
 {
     public partial class Frm_AdicionarLivro : Form 
     {
+        public List<CadastroLivro> listaLivros = new List<CadastroLivro>();
         public Frm_AdicionarLivro()
         {
             InitializeComponent();
@@ -64,7 +65,7 @@ namespace RepositorioLivros
             }
 
         }
-
+        
         private void Btn_SalvarLivro_Click(object sender, EventArgs e)
         {
            
@@ -88,8 +89,23 @@ namespace RepositorioLivros
 
                 //CadastroLivro.cadastraolivro(Txt_Titulo2.Text, Cbx_Genero.Text, midia, anolancamento, Cbx_StatusLeitura.Text, Cbx_AnoAquisicao.Text, Msk_ValorLivro.Text, Txt_Autor.Text, esaga);
 
+                
+
                 var cadastro = new CadastroLivro(titulo, genero, midia, anolancamento, statusLeitura, anoAquisicao, valorLivro, autor, esaga);
+
+                
+
+                StreamWriter sw = new StreamWriter(@"C:\Users\gabriel.mendonca\Desktop\arquivo.json");
+                sw.WriteLine(cadastro.JsonSerializar(cadastro));
+                sw.Close();
                 MessageBox.Show(cadastro.JsonSerializar(cadastro));
+
+                
+
+                listaLivros.Add(cadastro);
+
+
+                
                 MessageBox.Show("Dados salvos com sucesso!", "Salvo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
 

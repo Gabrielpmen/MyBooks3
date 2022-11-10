@@ -31,16 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ConsultaLivro));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.Ltv_BdLivros = new System.Windows.Forms.ListView();
-            this.Cl_Titulo = new System.Windows.Forms.ColumnHeader();
-            this.Cl_Genero = new System.Windows.Forms.ColumnHeader();
-            this.Cl_Midia = new System.Windows.Forms.ColumnHeader();
-            this.Cl_AnoLancamento = new System.Windows.Forms.ColumnHeader();
-            this.Cl_StatusLeitura = new System.Windows.Forms.ColumnHeader();
-            this.Cl_AnoAquisição = new System.Windows.Forms.ColumnHeader();
-            this.Cl_ValorPago = new System.Windows.Forms.ColumnHeader();
-            this.Cl_Autor = new System.Windows.Forms.ColumnHeader();
-            this.Cl_Emprestado = new System.Windows.Forms.ColumnHeader();
             this.Lbl_TituloCL = new System.Windows.Forms.Label();
             this.Txb_TituloCL = new System.Windows.Forms.TextBox();
             this.Btn_Pesquisar = new System.Windows.Forms.Button();
@@ -61,6 +51,8 @@
             this.Lbl_EstaEmprestado = new System.Windows.Forms.Label();
             this.Chkb_SagaSCL = new System.Windows.Forms.CheckBox();
             this.Chkb_SagaNCL = new System.Windows.Forms.CheckBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -68,81 +60,6 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // Ltv_BdLivros
-            // 
-            this.Ltv_BdLivros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Ltv_BdLivros.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Cl_Titulo,
-            this.Cl_Genero,
-            this.Cl_Midia,
-            this.Cl_AnoLancamento,
-            this.Cl_StatusLeitura,
-            this.Cl_AnoAquisição,
-            this.Cl_ValorPago,
-            this.Cl_Autor,
-            this.Cl_Emprestado});
-            this.Ltv_BdLivros.FullRowSelect = true;
-            this.Ltv_BdLivros.GridLines = true;
-            this.Ltv_BdLivros.Location = new System.Drawing.Point(70, 417);
-            this.Ltv_BdLivros.MultiSelect = false;
-            this.Ltv_BdLivros.Name = "Ltv_BdLivros";
-            this.Ltv_BdLivros.Size = new System.Drawing.Size(1896, 499);
-            this.Ltv_BdLivros.TabIndex = 1;
-            this.Ltv_BdLivros.UseCompatibleStateImageBehavior = false;
-            this.Ltv_BdLivros.View = System.Windows.Forms.View.Details;
-            // 
-            // Cl_Titulo
-            // 
-            this.Cl_Titulo.Text = "Título";
-            this.Cl_Titulo.Width = 500;
-            // 
-            // Cl_Genero
-            // 
-            this.Cl_Genero.Text = "Gênero";
-            this.Cl_Genero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Cl_Genero.Width = 200;
-            // 
-            // Cl_Midia
-            // 
-            this.Cl_Midia.Text = "Mídia";
-            this.Cl_Midia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Cl_AnoLancamento
-            // 
-            this.Cl_AnoLancamento.Text = "Ano de Lanç.";
-            this.Cl_AnoLancamento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Cl_AnoLancamento.Width = 150;
-            // 
-            // Cl_StatusLeitura
-            // 
-            this.Cl_StatusLeitura.Text = "Status da Leitura";
-            this.Cl_StatusLeitura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Cl_StatusLeitura.Width = 200;
-            // 
-            // Cl_AnoAquisição
-            // 
-            this.Cl_AnoAquisição.Text = "Ano de Aquisição";
-            this.Cl_AnoAquisição.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Cl_AnoAquisição.Width = 160;
-            // 
-            // Cl_ValorPago
-            // 
-            this.Cl_ValorPago.Text = "Valor";
-            this.Cl_ValorPago.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Cl_ValorPago.Width = 100;
-            // 
-            // Cl_Autor
-            // 
-            this.Cl_Autor.Text = "Autor";
-            this.Cl_Autor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Cl_Autor.Width = 400;
-            // 
-            // Cl_Emprestado
-            // 
-            this.Cl_Emprestado.Text = "Emprestado?";
-            this.Cl_Emprestado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Cl_Emprestado.Width = 120;
             // 
             // Lbl_TituloCL
             // 
@@ -392,12 +309,24 @@
             this.Chkb_SagaNCL.Text = "Não";
             this.Chkb_SagaNCL.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(38, 487);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 33;
+            this.dataGridView1.Size = new System.Drawing.Size(1954, 479);
+            this.dataGridView1.TabIndex = 41;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // Frm_ConsultaLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(2027, 978);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Chkb_SagaNCL);
             this.Controls.Add(this.Chkb_SagaSCL);
             this.Controls.Add(this.Lbl_EstaEmprestado);
@@ -418,13 +347,13 @@
             this.Controls.Add(this.Btn_Pesquisar);
             this.Controls.Add(this.Txb_TituloCL);
             this.Controls.Add(this.Lbl_TituloCL);
-            this.Controls.Add(this.Ltv_BdLivros);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_ConsultaLivro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar Livros";
             this.Load += new System.EventHandler(this.ConsultaLivro_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -432,16 +361,6 @@
 
         #endregion
         private ContextMenuStrip contextMenuStrip1;
-        private ListView Ltv_BdLivros;
-        private ColumnHeader Cl_Titulo;
-        private ColumnHeader Cl_Genero;
-        private ColumnHeader Cl_Midia;
-        private ColumnHeader Cl_AnoLancamento;
-        private ColumnHeader Cl_StatusLeitura;
-        private ColumnHeader Cl_AnoAquisição;
-        private ColumnHeader Cl_ValorPago;
-        private ColumnHeader Cl_Autor;
-        private ColumnHeader Cl_Emprestado;
         private Label Lbl_TituloCL;
         private TextBox Txb_TituloCL;
         private Button Btn_Pesquisar;
@@ -462,5 +381,6 @@
         private Label Lbl_EstaEmprestado;
         private CheckBox Chkb_SagaSCL;
         private CheckBox Chkb_SagaNCL;
+        private DataGridView dataGridView1;
     }
 }
