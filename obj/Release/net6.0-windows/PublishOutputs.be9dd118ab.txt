@@ -1,0 +1,7 @@
+C:\Users\gabri\OneDrive\Área de Trabalho\projeto livros\MyBooks3\bin\Release\net6.0-windows\publish\RepositorioLivros.exe
+C:\Users\gabri\OneDrive\Área de Trabalho\projeto livros\MyBooks3\bin\Release\net6.0-windows\publish\RepositorioLivros.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\projeto livros\MyBooks3\bin\Release\net6.0-windows\publish\RepositorioLivros.deps.json
+C:\Users\gabri\OneDrive\Área de Trabalho\projeto livros\MyBooks3\bin\Release\net6.0-windows\publish\RepositorioLivros.runtimeconfig.json
+C:\Users\gabri\OneDrive\Área de Trabalho\projeto livros\MyBooks3\bin\Release\net6.0-windows\publish\RepositorioLivros.pdb
+C:\Users\gabri\OneDrive\Área de Trabalho\projeto livros\MyBooks3\bin\Release\net6.0-windows\publish\Newtonsoft.Json.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\projeto livros\MyBooks3\bin\Release\net6.0-windows\publish\Newtonsoft.Json.Bson.dll

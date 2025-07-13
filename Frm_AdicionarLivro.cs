@@ -1,186 +1,98 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using RepositorioLivros.Entities;
-using Newtonsoft.Json;
-
+using RepositorioLivros.Services;
 
 namespace RepositorioLivros
 {
-    public partial class Frm_AdicionarLivro : Form 
+    public partial class Frm_AdicionarLivro : Form
     {
-        public List<CadastroLivro> listaLivros = new List<CadastroLivro>();
+        private readonly LivroService _livroService;
+
         public Frm_AdicionarLivro()
         {
             InitializeComponent();
+            _livroService = new LivroService();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
-        {
-
-        }
-
-        private void vScrollBar1_Scroll_1(object sender, ScrollEventArgs e)
-        {
-
-        }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Frm_AdicionarLivro_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Frm_AdicionarLivro_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
-            //Se o usuário clicar em “Não” na caixa de dialogo a saída será abortada, caso contrario o form é fechado.
-
-            if (MessageBox.Show("Deseja realmente sair ?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-
-            {
-
-                e.Cancel = true;
-
-            }
-
-        }
-        
+        // ... (mantenha o seu método Btn_SalvarLivro_Click e outros que já funcionam)
         private void Btn_SalvarLivro_Click(object sender, EventArgs e)
         {
-           
-
-            if (Txt_Titulo2.Text == "" || Cbx_Genero.Text == "" || Cbx_Midia.Text == "" || Cbx_AnoLancamento.Text == "" || Cbx_StatusLeitura.Text == "" || Cbx_AnoAquisicao.Text == "" || Msk_ValorLivro.Text == "" || Txt_Autor.Text == "") 
+            // Validação do Input do Front-End
+            if (string.IsNullOrWhiteSpace(Txt_Titulo2.Text) ||
+                string.IsNullOrWhiteSpace(Cbx_Genero.Text) ||
+                string.IsNullOrWhiteSpace(Cbx_Midia.Text) ||
+                string.IsNullOrWhiteSpace(Cbx_AnoLancamento.Text) ||
+                string.IsNullOrWhiteSpace(Cbx_StatusLeitura.Text) ||
+                string.IsNullOrWhiteSpace(Cbx_AnoAquisicao.Text) ||
+                string.IsNullOrWhiteSpace(Msk_ValorLivro.Text) ||
+                string.IsNullOrWhiteSpace(Txt_Autor.Text))
             {
-                MessageBox.Show("Ainda existem campos à serem preenchidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                MessageBox.Show("Ainda existem campos a serem preenchidos!", "Erro de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
+
+            if (!double.TryParse(Msk_ValorLivro.Text, out double valorLivro))
             {
-                string midia = Cbx_Midia.Text;
-                string anolancamento =  Cbx_AnoLancamento.Text;
-                string esaga = Chkb_SagaS.Text;
-                string titulo = Txt_Titulo2.Text;
-                string genero = Cbx_Genero.Text;
-                string statusLeitura = Cbx_StatusLeitura.Text;
-                string anoAquisicao = Cbx_AnoAquisicao.Text;
-                double valorLivro = double.Parse(Msk_ValorLivro.Text);
-                string autor = Txt_Autor.Text;
-
-                //CadastroLivro.cadastraolivro(Txt_Titulo2.Text, Cbx_Genero.Text, midia, anolancamento, Cbx_StatusLeitura.Text, Cbx_AnoAquisicao.Text, Msk_ValorLivro.Text, Txt_Autor.Text, esaga);
-
-                
-
-                var cadastro = new CadastroLivro(titulo, genero, midia, anolancamento, statusLeitura, anoAquisicao, valorLivro, autor, esaga);
-
-                
-
-                StreamWriter sw = new StreamWriter(@"C:\REPOS\arq.txt");
-                sw.WriteLine(cadastro.JsonSerializar(cadastro));
-                sw.WriteLine()
-                listaLivros.Add(cadastro);
-                sw.Close();
-                MessageBox.Show(cadastro.JsonSerializar(cadastro));
-
-                
-
-                
-
-
-                
-                MessageBox.Show("Dados salvos com sucesso!", "Salvo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-
-                Txt_Titulo2.Text = null;
-                Cbx_Genero.Text = null;
-                Cbx_Midia.Text = null;
-                Cbx_AnoLancamento.Text = null;
-                Cbx_StatusLeitura.Text = null;
-                Cbx_AnoAquisicao.Text = null;
-                Msk_ValorLivro.Text = null;
-                Txt_Autor.Text = null;
-
-                
+                MessageBox.Show("O valor do livro informado é inválido.", "Erro de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            
-            
-        }
 
-        private void Txt_Titulo2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Cbx_Midia_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Btn_Voltaradc_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void salvarToolStripButton_Click(object sender, EventArgs e)
-        {
-            if (Txt_Titulo2.Text == "" || Cbx_Genero.Text == "" || Cbx_Midia.Text == "" || Cbx_AnoLancamento.Text == "" || Cbx_StatusLeitura.Text == "" || Cbx_AnoAquisicao.Text == "" || Msk_ValorLivro.Text == "" || Txt_Autor.Text == "")
+            try
             {
-                MessageBox.Show("Ainda existem campos à serem preenchidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                List<CadastroLivro> listaLivros = _livroService.CarregarLivros();
+                var novoLivro = new CadastroLivro(
+                    Txt_Titulo2.Text,
+                    Cbx_Genero.Text,
+                    Cbx_Midia.Text,
+                    Cbx_AnoLancamento.Text,
+                    Cbx_StatusLeitura.Text,
+                    Cbx_AnoAquisicao.Text,
+                    valorLivro,
+                    Txt_Autor.Text,
+                    Chkb_SagaS.Checked ? "Sim" : "Não"
+                );
+                listaLivros.Add(novoLivro);
+                _livroService.SalvarLivros(listaLivros);
+                MessageBox.Show("Livro salvo com sucesso!", "Salvo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LimparCampos();
             }
-            else
+            catch (Exception ex)
             {
-                string midia = Cbx_Midia.Text;
-                string anolancamento = Cbx_AnoLancamento.Text;
-                string esaga = Chkb_SagaS.Text;
-                CadastroLivro.cadastraolivro(Txt_Titulo2.Text, Cbx_Genero.Text, midia, anolancamento, Cbx_StatusLeitura.Text, Cbx_AnoAquisicao.Text, Msk_ValorLivro.Text, Txt_Autor.Text, esaga);
+                MessageBox.Show($"Ocorreu um erro inesperado ao salvar o livro: {ex.Message}", "Erro Crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        
+        private void LimparCampos()
+        {
+            Txt_Titulo2.Clear();
+            Cbx_Genero.SelectedIndex = -1;
+            Cbx_Midia.SelectedIndex = -1;
+            Cbx_AnoLancamento.SelectedIndex = -1;
+            Cbx_StatusLeitura.SelectedIndex = -1;
+            Cbx_AnoAquisicao.SelectedIndex = -1;
+            Msk_ValorLivro.Clear();
+            Txt_Autor.Clear();
+            Chkb_SagaS.Checked = false;
+        }
 
-                Txt_Titulo2.Text = null;
-                Cbx_Genero.Text = null;
-                Cbx_Midia.Text = null;
-                Cbx_AnoLancamento.Text = null;
-                Cbx_StatusLeitura.Text = null;
-                Cbx_AnoAquisicao.Text = null;
-                Msk_ValorLivro.Text = null;
-                Txt_Autor.Text = null;
-
-
-                MessageBox.Show("Dados salvos com sucesso!", "Salvo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        private void novaToolStripButton_Click(object sender, EventArgs e) { LimparCampos(); }
+        private void salvarToolStripButton_Click(object sender, EventArgs e) { Btn_SalvarLivro_Click(sender, e); }
+        private void Btn_Voltaradc_Click(object sender, EventArgs e) { this.Close(); }
+        private void Frm_AdicionarLivro_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Deseja realmente sair?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
             }
         }
 
-        private void novaToolStripButton_Click(object sender, EventArgs e)
-        {
-            Txt_Titulo2.Text = null;
-            Cbx_Genero.Text = null;
-            Cbx_Midia.Text = null;
-            Cbx_AnoLancamento.Text = null;
-            Cbx_StatusLeitura.Text = null;
-            Cbx_AnoAquisicao.Text = null;
-            Msk_ValorLivro.Text = null;
-            Txt_Autor.Text = null;
-        }
+
+        // --- MÉTODOS ADICIONADOS PARA CORRIGIR ERROS CS1061 ---
+        private void label1_Click(object sender, EventArgs e) { /* Deixe vazio */ }
+        private void Cbx_Midia_SelectedIndexChanged(object sender, EventArgs e) { /* Deixe vazio */ }
+        private void Txt_Titulo2_TextChanged(object sender, EventArgs e) { /* Deixe vazio */ }
+        private void Frm_AdicionarLivro_Load(object sender, EventArgs e) { /* Deixe vazio */ }
     }
-    
-    }
-
+}

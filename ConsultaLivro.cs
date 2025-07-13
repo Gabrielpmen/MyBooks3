@@ -1,60 +1,53 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Newtonsoft.Json;
-using RepositorioLivros.Entities;
+using RepositorioLivros.Services;
 
-
+// Este arquivo define a lógica para a classe Frm_ConsultaLivro
 namespace RepositorioLivros
 {
     public partial class Frm_ConsultaLivro : Form
     {
+        private readonly LivroService _livroService;
+
         public Frm_ConsultaLivro()
         {
             InitializeComponent();
+            _livroService = new LivroService();
         }
 
+        //
+        // Este é o método que o seu Designer está procurando.
+        // Ao adicioná-lo aqui, no arquivo ConsultaLivro.cs, o erro será resolvido.
+        //
         private void ConsultaLivro_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            CarregarEExibirLivros();
         }
 
         private void Btn_Pesquisar_Click(object sender, EventArgs e)
         {
-            var lista = CadastroLivro.JsonDesserializarLista(@"C:\REPOS\arq.txt");
-            
-
-            dataGridView1.DataSource = lista;
+            CarregarEExibirLivros();
         }
 
-        private void Ltv_BdLivros_SelectedIndexChanged(object sender, EventArgs e)
+        private void CarregarEExibirLivros()
         {
-            
-
-                
-
+            try
+            {
+                var listaDeLivros = _livroService.CarregarLivros();
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = listaDeLivros;
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocorreu um erro inesperado ao carregar os livros: {ex.Message}", "Erro Crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
+        
+        // Método que o designer também procura, pode ficar vazio.
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            // Deixe este método vazio se não precisar de nenhuma ação ao clicar na célula.
         }
     }
-    }
-
+}
