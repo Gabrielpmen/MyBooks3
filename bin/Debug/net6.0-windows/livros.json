@@ -9,5 +9,16 @@
     "ValorPago": 2000.0,
     "Autor": "asdasd",
     "Esaga": "Não"
+  },
+  {
+    "Titulo": " clarice",
+    "Genero": "Romance",
+    "Midia": "Física",
+    "AnoLancamento": "2007",
+    "StatusLeitura": "Em Andamento",
+    "AnoCompra": "2009",
+    "ValorPago": 20000.0,
+    "Autor": "clarice",
+    "Esaga": "Não"
   }
 ]

@@ -1,0 +1,157 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\projeto livros\\MyBooks3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7C80D072-1B75-4998-9A54-9C41655B745D}|RepositorioLivros.csproj|c:\\users\\gabri\\onedrive\\\u00E1rea de trabalho\\projeto livros\\mybooks3\\consultalivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C80D072-1B75-4998-9A54-9C41655B745D}|RepositorioLivros.csproj|solutionrelative:consultalivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C80D072-1B75-4998-9A54-9C41655B745D}|RepositorioLivros.csproj|c:\\users\\gabri\\onedrive\\\u00E1rea de trabalho\\projeto livros\\mybooks3\\frm_adicionarlivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C80D072-1B75-4998-9A54-9C41655B745D}|RepositorioLivros.csproj|solutionrelative:frm_adicionarlivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C80D072-1B75-4998-9A54-9C41655B745D}|RepositorioLivros.csproj|c:\\users\\gabri\\onedrive\\\u00E1rea de trabalho\\projeto livros\\mybooks3\\frm_validacaodados.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C80D072-1B75-4998-9A54-9C41655B745D}|RepositorioLivros.csproj|solutionrelative:frm_validacaodados.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C80D072-1B75-4998-9A54-9C41655B745D}|RepositorioLivros.csproj|c:\\users\\gabri\\onedrive\\\u00E1rea de trabalho\\projeto livros\\mybooks3\\frm_validacaodados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C80D072-1B75-4998-9A54-9C41655B745D}|RepositorioLivros.csproj|solutionrelative:frm_validacaodados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C80D072-1B75-4998-9A54-9C41655B745D}|RepositorioLivros.csproj|c:\\users\\gabri\\onedrive\\\u00E1rea de trabalho\\projeto livros\\mybooks3\\consultalivro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C80D072-1B75-4998-9A54-9C41655B745D}|RepositorioLivros.csproj|solutionrelative:consultalivro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C80D072-1B75-4998-9A54-9C41655B745D}|RepositorioLivros.csproj|c:\\users\\gabri\\onedrive\\\u00E1rea de trabalho\\projeto livros\\mybooks3\\consultalivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C80D072-1B75-4998-9A54-9C41655B745D}|RepositorioLivros.csproj|solutionrelative:consultalivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C80D072-1B75-4998-9A54-9C41655B745D}|RepositorioLivros.csproj|c:\\users\\gabri\\onedrive\\\u00E1rea de trabalho\\projeto livros\\mybooks3\\services\\livroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C80D072-1B75-4998-9A54-9C41655B745D}|RepositorioLivros.csproj|solutionrelative:services\\livroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C80D072-1B75-4998-9A54-9C41655B745D}|RepositorioLivros.csproj|C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\projeto livros\\MyBooks3\\frm_adicionarlivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7C80D072-1B75-4998-9A54-9C41655B745D}|RepositorioLivros.csproj|solutionrelative:frm_adicionarlivro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ConsultaLivro.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\projeto livros\\MyBooks3\\ConsultaLivro.cs",
+              "RelativeDocumentMoniker": "ConsultaLivro.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\projeto livros\\MyBooks3\\ConsultaLivro.cs [Projeto]",
+              "RelativeToolTip": "ConsultaLivro.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-13T14:53:51.199Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ConsultaLivro.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\projeto livros\\MyBooks3\\ConsultaLivro.cs",
+              "RelativeDocumentMoniker": "ConsultaLivro.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\projeto livros\\MyBooks3\\ConsultaLivro.cs",
+              "RelativeToolTip": "ConsultaLivro.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAADwvxwAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-13T14:12:22.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LivroService.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\projeto livros\\MyBooks3\\Services\\LivroService.cs",
+              "RelativeDocumentMoniker": "Services\\LivroService.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\projeto livros\\MyBooks3\\Services\\LivroService.cs",
+              "RelativeToolTip": "Services\\LivroService.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAiwDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-13T13:52:39.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ConsultaLivro.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\projeto livros\\MyBooks3\\ConsultaLivro.Designer.cs",
+              "RelativeDocumentMoniker": "ConsultaLivro.Designer.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\projeto livros\\MyBooks3\\ConsultaLivro.Designer.cs",
+              "RelativeToolTip": "ConsultaLivro.Designer.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAUwKEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-13T13:41:01.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Frm_ValidacaoDados.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\projeto livros\\MyBooks3\\Frm_ValidacaoDados.cs",
+              "RelativeDocumentMoniker": "Frm_ValidacaoDados.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\projeto livros\\MyBooks3\\Frm_ValidacaoDados.cs",
+              "RelativeToolTip": "Frm_ValidacaoDados.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAmwBEAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-13T13:36:56.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Frm_ValidacaoDados.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\projeto livros\\MyBooks3\\Frm_ValidacaoDados.Designer.cs",
+              "RelativeDocumentMoniker": "Frm_ValidacaoDados.Designer.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\projeto livros\\MyBooks3\\Frm_ValidacaoDados.Designer.cs",
+              "RelativeToolTip": "Frm_ValidacaoDados.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-13T13:36:34.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Frm_AdicionarLivro.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\projeto livros\\MyBooks3\\Frm_AdicionarLivro.cs",
+              "RelativeDocumentMoniker": "Frm_AdicionarLivro.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\projeto livros\\MyBooks3\\Frm_AdicionarLivro.cs",
+              "RelativeToolTip": "Frm_AdicionarLivro.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAcwAoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-13T13:34:22.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Frm_AdicionarLivro.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\projeto livros\\MyBooks3\\Frm_AdicionarLivro.cs",
+              "RelativeDocumentMoniker": "Frm_AdicionarLivro.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\\u00C1rea de Trabalho\\clone\\MyBooks3\\Frm_AdicionarLivro.cs [Design]",
+              "RelativeToolTip": "..\\..\\clone\\MyBooks3\\Frm_AdicionarLivro.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-07-13T13:34:22.197Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

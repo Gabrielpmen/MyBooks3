@@ -38,6 +38,25 @@ namespace RepositorioLivros.Services
 
             return livros;
         }
+        // --- NOVO MÉTODO PARA EXCLUIR UM LIVRO ---
+        public void ExcluirLivro(string tituloDoLivro)
+        {
+            // 1. Carrega todos os livros existentes
+            List<CadastroLivro> livros = CarregarLivros();
+
+            // 2. Encontra o livro que deve ser removido
+            // Usamos o título como identificador único.
+            var livroParaRemover = livros.FirstOrDefault(livro => livro.Titulo.Equals(tituloDoLivro, StringComparison.OrdinalIgnoreCase));
+
+            // 3. Se o livro foi encontrado, remove-o da lista
+            if (livroParaRemover != null)
+            {
+                livros.Remove(livroParaRemover);
+
+                // 4. Salva a lista atualizada (sem o livro removido) de volta no arquivo
+                SalvarLivros(livros);
+            }
+        }
 
         /// <summary>
         /// Salva a lista inteira de livros no arquivo JSON, sobrescrevendo o conteúdo anterior.
@@ -51,5 +70,6 @@ namespace RepositorioLivros.Services
             // Escreve a string no arquivo.
             File.WriteAllText(FilePath, json);
         }
+
     }
 }
