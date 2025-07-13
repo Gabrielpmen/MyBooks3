@@ -1,24 +1,24 @@
 [
   {
-    "Titulo": "teste",
-    "Genero": "Thriller e Suspense",
-    "Midia": "Física",
-    "AnoLancamento": "2004",
-    "StatusLeitura": "Em Andamento",
-    "AnoCompra": "2007",
-    "ValorPago": 2000.0,
-    "Autor": "asdasd",
+    "Titulo": "Teste",
+    "Genero": "Crimes Reais",
+    "Midia": "Digital",
+    "AnoLancamento": "2006",
+    "StatusLeitura": "Concluído",
+    "AnoCompra": "2005",
+    "ValorPago": 60000.0,
+    "Autor": "teste",
     "Esaga": "Não"
   },
   {
-    "Titulo": " clarice",
-    "Genero": "Romance",
+    "Titulo": "Clarice",
+    "Genero": "Infantil",
     "Midia": "Física",
-    "AnoLancamento": "2007",
+    "AnoLancamento": "2005",
     "StatusLeitura": "Em Andamento",
     "AnoCompra": "2009",
-    "ValorPago": 20000.0,
-    "Autor": "clarice",
+    "ValorPago": 2000.0,
+    "Autor": "Clarice",
     "Esaga": "Não"
   }
 ]
