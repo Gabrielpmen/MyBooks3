@@ -2,15 +2,8 @@
 {
     partial class MyBook
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,92 +15,103 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyBook));
+            this.mainTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.Lbl_AppTitle = new System.Windows.Forms.Label();
             this.Btn_CadastroLivro = new System.Windows.Forms.Button();
             this.Btn_ConsultaLivros = new System.Windows.Forms.Button();
-            this.Lbl_MeusLivros = new System.Windows.Forms.Label();
-            this.Btn_EmprestarLivro = new System.Windows.Forms.Button();
-            this.Btn_DevolucaoLivro = new System.Windows.Forms.Button();
             this.Btn_Sair = new System.Windows.Forms.Button();
-            this.Btn_ListaDesejos = new System.Windows.Forms.Button();
+            this.mainTableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // mainTableLayoutPanel
+            // 
+            this.mainTableLayoutPanel.ColumnCount = 1;
+            this.mainTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.mainTableLayoutPanel.Controls.Add(this.Lbl_AppTitle, 0, 1);
+            this.mainTableLayoutPanel.Controls.Add(this.Btn_CadastroLivro, 0, 2);
+            this.mainTableLayoutPanel.Controls.Add(this.Btn_ConsultaLivros, 0, 3);
+            this.mainTableLayoutPanel.Controls.Add(this.Btn_Sair, 0, 4);
+            this.mainTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainTableLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainTableLayoutPanel.Name = "mainTableLayoutPanel";
+            this.mainTableLayoutPanel.RowCount = 6;
+            this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.mainTableLayoutPanel.Size = new System.Drawing.Size(582, 553);
+            this.mainTableLayoutPanel.TabIndex = 0;
+            // 
+            // Lbl_AppTitle
+            // 
+            this.Lbl_AppTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Lbl_AppTitle.AutoSize = true;
+            this.Lbl_AppTitle.Location = new System.Drawing.Point(191, 126);
+            this.Lbl_AppTitle.Name = "Lbl_AppTitle";
+            this.Lbl_AppTitle.Size = new System.Drawing.Size(200, 50);
+            this.Lbl_AppTitle.TabIndex = 0;
+            this.Lbl_AppTitle.Text = "MyBooks";
             // 
             // Btn_CadastroLivro
             // 
-            resources.ApplyResources(this.Btn_CadastroLivro, "Btn_CadastroLivro");
+            this.Btn_CadastroLivro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btn_CadastroLivro.Location = new System.Drawing.Point(166, 206);
+            this.Btn_CadastroLivro.Margin = new System.Windows.Forms.Padding(10);
             this.Btn_CadastroLivro.Name = "Btn_CadastroLivro";
+            this.Btn_CadastroLivro.Size = new System.Drawing.Size(250, 50);
+            this.Btn_CadastroLivro.TabIndex = 1;
+            this.Btn_CadastroLivro.Text = "Adicionar Novo Livro";
             this.Btn_CadastroLivro.UseVisualStyleBackColor = true;
             this.Btn_CadastroLivro.Click += new System.EventHandler(this.Btn_CadastroLivro_Click);
             // 
             // Btn_ConsultaLivros
             // 
-            resources.ApplyResources(this.Btn_ConsultaLivros, "Btn_ConsultaLivros");
+            this.Btn_ConsultaLivros.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btn_ConsultaLivros.Location = new System.Drawing.Point(166, 276);
+            this.Btn_ConsultaLivros.Margin = new System.Windows.Forms.Padding(10);
             this.Btn_ConsultaLivros.Name = "Btn_ConsultaLivros";
+            this.Btn_ConsultaLivros.Size = new System.Drawing.Size(250, 50);
+            this.Btn_ConsultaLivros.TabIndex = 2;
+            this.Btn_ConsultaLivros.Text = "Consultar Meus Livros";
             this.Btn_ConsultaLivros.UseVisualStyleBackColor = true;
             this.Btn_ConsultaLivros.Click += new System.EventHandler(this.Btn_ConsultaLivros_Click);
             // 
-            // Lbl_MeusLivros
-            // 
-            resources.ApplyResources(this.Lbl_MeusLivros, "Lbl_MeusLivros");
-            this.Lbl_MeusLivros.Name = "Lbl_MeusLivros";
-            // 
-            // Btn_EmprestarLivro
-            // 
-            resources.ApplyResources(this.Btn_EmprestarLivro, "Btn_EmprestarLivro");
-            this.Btn_EmprestarLivro.Name = "Btn_EmprestarLivro";
-            this.Btn_EmprestarLivro.UseVisualStyleBackColor = true;
-            // 
-            // Btn_DevolucaoLivro
-            // 
-            resources.ApplyResources(this.Btn_DevolucaoLivro, "Btn_DevolucaoLivro");
-            this.Btn_DevolucaoLivro.Name = "Btn_DevolucaoLivro";
-            this.Btn_DevolucaoLivro.UseVisualStyleBackColor = true;
-            // 
             // Btn_Sair
             // 
-            resources.ApplyResources(this.Btn_Sair, "Btn_Sair");
+            this.Btn_Sair.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btn_Sair.Location = new System.Drawing.Point(166, 346);
+            this.Btn_Sair.Margin = new System.Windows.Forms.Padding(10);
             this.Btn_Sair.Name = "Btn_Sair";
+            this.Btn_Sair.Size = new System.Drawing.Size(250, 50);
+            this.Btn_Sair.TabIndex = 3;
+            this.Btn_Sair.Text = "Sair";
             this.Btn_Sair.UseVisualStyleBackColor = true;
             this.Btn_Sair.Click += new System.EventHandler(this.Btn_Sair_Click);
             // 
-            // Btn_ListaDesejos
-            // 
-            resources.ApplyResources(this.Btn_ListaDesejos, "Btn_ListaDesejos");
-            this.Btn_ListaDesejos.Name = "Btn_ListaDesejos";
-            this.Btn_ListaDesejos.UseVisualStyleBackColor = true;
-            // 
             // MyBook
             // 
-            resources.ApplyResources(this, "$this");
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.Controls.Add(this.Btn_ListaDesejos);
-            this.Controls.Add(this.Btn_Sair);
-            this.Controls.Add(this.Btn_DevolucaoLivro);
-            this.Controls.Add(this.Btn_EmprestarLivro);
-            this.Controls.Add(this.Lbl_MeusLivros);
-            this.Controls.Add(this.Btn_ConsultaLivros);
-            this.Controls.Add(this.Btn_CadastroLivro);
+            this.ClientSize = new System.Drawing.Size(582, 553);
+            this.Controls.Add(this.mainTableLayoutPanel);
             this.Name = "MyBook";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "MyBooks - Seu Repositório de Livros";
+            this.mainTableLayoutPanel.ResumeLayout(false);
+            this.mainTableLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
-
         }
 
         #endregion
 
-        private Button Btn_CadastroLivro;
-        private Button Btn_ConsultaLivros;
-        private Label Lbl_MeusLivros;
-        private Button Btn_EmprestarLivro;
-        private Button Btn_DevolucaoLivro;
-        private Button Btn_Sair;
-        private Button Btn_ListaDesejos;
+        private System.Windows.Forms.TableLayoutPanel mainTableLayoutPanel;
+        private System.Windows.Forms.Label Lbl_AppTitle;
+        private System.Windows.Forms.Button Btn_CadastroLivro;
+        private System.Windows.Forms.Button Btn_ConsultaLivros;
+        private System.Windows.Forms.Button Btn_Sair;
     }
 }

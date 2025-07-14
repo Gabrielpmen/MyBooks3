@@ -27,6 +27,7 @@
             this.Cbx_MidiaCL = new System.Windows.Forms.ComboBox();
             this.Btn_Pesquisar = new System.Windows.Forms.Button();
             this.Btn_Excluir = new System.Windows.Forms.Button();
+            this.Btn_Voltar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -76,20 +77,9 @@
             // 
             this.Cbx_GeneroCL.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.Cbx_GeneroCL.FormattingEnabled = true;
-            // --- CÓDIGO ADICIONADO PARA POPULAR A LISTA ---
             this.Cbx_GeneroCL.Items.AddRange(new object[] {
-            "Horror",
-            "Romance",
-            "Thriller e Suspense",
-            "Infantil",
-            "Crimes Reais",
-            "Humor e comédia",
-            "Ficção científica",
-            "Ação e aventura",
-            "Autoajuda",
-            "Gastronomia",
-            "Fantasia"});
-            // --- FIM DO CÓDIGO ADICIONADO ---
+            "Horror", "Romance", "Thriller e Suspense", "Infantil", "Crimes Reais", "Humor e comédia",
+            "Ficção científica", "Ação e aventura", "Autoajuda", "Gastronomia", "Fantasia"});
             this.Cbx_GeneroCL.Location = new System.Drawing.Point(95, 67);
             this.Cbx_GeneroCL.Name = "Cbx_GeneroCL";
             this.Cbx_GeneroCL.Size = new System.Drawing.Size(180, 31);
@@ -119,7 +109,7 @@
             this.Btn_Pesquisar.Name = "Btn_Pesquisar";
             this.Btn_Pesquisar.Size = new System.Drawing.Size(120, 40);
             this.Btn_Pesquisar.Text = "Pesquisar";
-
+            this.Btn_Pesquisar.UseVisualStyleBackColor = true;
             // 
             // Btn_Excluir
             // 
@@ -128,7 +118,17 @@
             this.Btn_Excluir.Name = "Btn_Excluir";
             this.Btn_Excluir.Size = new System.Drawing.Size(120, 40);
             this.Btn_Excluir.Text = "Excluir";
-
+            this.Btn_Excluir.UseVisualStyleBackColor = true;
+            // 
+            // Btn_Voltar
+            // 
+            this.Btn_Voltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_Voltar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.Btn_Voltar.Location = new System.Drawing.Point(803, 120);
+            this.Btn_Voltar.Name = "Btn_Voltar";
+            this.Btn_Voltar.Size = new System.Drawing.Size(120, 40);
+            this.Btn_Voltar.Text = "Voltar";
+            this.Btn_Voltar.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -142,11 +142,11 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(896, 399);
-
             // 
             // Frm_ConsultaLivro
             // 
             this.ClientSize = new System.Drawing.Size(950, 600);
+            this.Controls.Add(this.Btn_Voltar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Btn_Excluir);
             this.Controls.Add(this.Btn_Pesquisar);
@@ -179,6 +179,7 @@
         private System.Windows.Forms.ComboBox Cbx_MidiaCL;
         private System.Windows.Forms.Button Btn_Pesquisar;
         private System.Windows.Forms.Button Btn_Excluir;
+        private System.Windows.Forms.Button Btn_Voltar;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

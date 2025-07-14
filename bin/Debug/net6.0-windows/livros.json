@@ -9,16 +9,5 @@
     "ValorPago": 60000.0,
     "Autor": "teste",
     "Esaga": "Não"
-  },
-  {
-    "Titulo": "Clarice",
-    "Genero": "Infantil",
-    "Midia": "Física",
-    "AnoLancamento": "2005",
-    "StatusLeitura": "Em Andamento",
-    "AnoCompra": "2009",
-    "ValorPago": 2000.0,
-    "Autor": "Clarice",
-    "Esaga": "Não"
   }
 ]
