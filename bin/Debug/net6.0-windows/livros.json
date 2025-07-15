@@ -1,5 +1,6 @@
 [
   {
+    "Id": "2bde728c-8b79-48ea-bcfd-82e27b30ba74",
     "Titulo": "Teste",
     "Genero": "Crimes Reais",
     "Midia": "Digital",
@@ -8,6 +9,18 @@
     "AnoCompra": "2005",
     "ValorPago": 60000.0,
     "Autor": "teste",
+    "Esaga": "Não"
+  },
+  {
+    "Id": "dae285e2-ede3-41dd-b9a9-90821399ad15",
+    "Titulo": "Gabriel",
+    "Genero": "Crimes Reais",
+    "Midia": "Física",
+    "AnoLancamento": "2008",
+    "StatusLeitura": "Concluído",
+    "AnoCompra": "2005",
+    "ValorPago": 2000.0,
+    "Autor": "Gabriel",
     "Esaga": "Não"
   }
 ]

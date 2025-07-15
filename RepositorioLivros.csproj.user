@@ -10,6 +10,9 @@
     <Compile Update="Frm_AdicionarLivro.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Frm_DetalhesLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Frm_ValidacaoDados.cs">
       <SubType>Form</SubType>
     </Compile>

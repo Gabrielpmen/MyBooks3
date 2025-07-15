@@ -1,75 +1,57 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Newtonsoft.Json;
 using RepositorioLivros.Entities;
-using System;
 
 namespace RepositorioLivros.Services
 {
     public class LivroService
     {
-        // Define um caminho padrão para o arquivo de dados.
-        // O arquivo "livros.json" será salvo no mesmo diretório do executável.
         private static readonly string FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "livros.json");
 
-        /// <summary>
-        /// Carrega a lista de livros a partir do arquivo JSON.
-        /// </summary>
-        /// <returns>Uma lista de objetos CadastroLivro.</returns>
         public List<CadastroLivro> CarregarLivros()
         {
-            // Se o arquivo não existir, retorna uma lista nova e vazia.
-            if (!File.Exists(FilePath))
+            if (!File.Exists(FilePath) || string.IsNullOrEmpty(File.ReadAllText(FilePath)))
             {
                 return new List<CadastroLivro>();
             }
-
-            // Lê todo o conteúdo do arquivo.
             string json = File.ReadAllText(FilePath);
-
-            // Se o arquivo estiver vazio, retorna uma lista vazia para evitar erros.
-            if (string.IsNullOrEmpty(json))
-            {
-                return new List<CadastroLivro>();
-            }
-
-            // Deserializa a string JSON para uma lista de livros.
-            var livros = JsonConvert.DeserializeObject<List<CadastroLivro>>(json) ?? new List<CadastroLivro>();
-
-            return livros;
+            return JsonConvert.DeserializeObject<List<CadastroLivro>>(json) ?? new List<CadastroLivro>();
         }
-        // --- NOVO MÉTODO PARA EXCLUIR UM LIVRO ---
-        public void ExcluirLivro(string tituloDoLivro)
+
+        public void SalvarLivros(List<CadastroLivro> livros)
         {
-            // 1. Carrega todos os livros existentes
+            string json = JsonConvert.SerializeObject(livros, Formatting.Indented);
+            File.WriteAllText(FilePath, json);
+        }
+
+        public void ExcluirLivro(Guid idDoLivro)
+        {
             List<CadastroLivro> livros = CarregarLivros();
+            var livroParaRemover = livros.FirstOrDefault(livro => livro.Id == idDoLivro);
 
-            // 2. Encontra o livro que deve ser removido
-            // Usamos o título como identificador único.
-            var livroParaRemover = livros.FirstOrDefault(livro => livro.Titulo.Equals(tituloDoLivro, StringComparison.OrdinalIgnoreCase));
-
-            // 3. Se o livro foi encontrado, remove-o da lista
             if (livroParaRemover != null)
             {
                 livros.Remove(livroParaRemover);
-
-                // 4. Salva a lista atualizada (sem o livro removido) de volta no arquivo
                 SalvarLivros(livros);
             }
         }
 
-        /// <summary>
-        /// Salva a lista inteira de livros no arquivo JSON, sobrescrevendo o conteúdo anterior.
-        /// </summary>
-        /// <param name="livros">A lista de livros a ser salva.</param>
-        public void SalvarLivros(List<CadastroLivro> livros)
+        // --- NOVO MÉTODO PARA ATUALIZAR UM LIVRO ---
+        public void AtualizarLivro(CadastroLivro livroAtualizado)
         {
-            // Serializa a lista para uma string JSON formatada.
-            string json = JsonConvert.SerializeObject(livros, Formatting.Indented);
+            List<CadastroLivro> livros = CarregarLivros();
+            // Encontra o índice do livro antigo na lista usando o ID
+            int index = livros.FindIndex(livro => livro.Id == livroAtualizado.Id);
 
-            // Escreve a string no arquivo.
-            File.WriteAllText(FilePath, json);
+            // Se encontrou o livro (índice é diferente de -1), o substitui
+            if (index != -1)
+            {
+                livros[index] = livroAtualizado;
+                SalvarLivros(livros);
+            }
         }
-
     }
 }

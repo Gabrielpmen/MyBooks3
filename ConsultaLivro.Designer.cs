@@ -27,9 +27,14 @@
             this.Cbx_MidiaCL = new System.Windows.Forms.ComboBox();
             this.Btn_Pesquisar = new System.Windows.Forms.Button();
             this.Btn_Excluir = new System.Windows.Forms.Button();
+            this.Btn_Editar = new System.Windows.Forms.Button();
+            this.Btn_LimparFiltros = new System.Windows.Forms.Button();
             this.Btn_Voltar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.tssStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Lbl_TituloCL
@@ -114,11 +119,29 @@
             // Btn_Excluir
             // 
             this.Btn_Excluir.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.Btn_Excluir.Location = new System.Drawing.Point(163, 120);
+            this.Btn_Excluir.Location = new System.Drawing.Point(157, 120);
             this.Btn_Excluir.Name = "Btn_Excluir";
             this.Btn_Excluir.Size = new System.Drawing.Size(120, 40);
             this.Btn_Excluir.Text = "Excluir";
             this.Btn_Excluir.UseVisualStyleBackColor = true;
+            // 
+            // Btn_Editar
+            // 
+            this.Btn_Editar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.Btn_Editar.Location = new System.Drawing.Point(287, 120);
+            this.Btn_Editar.Name = "Btn_Editar";
+            this.Btn_Editar.Size = new System.Drawing.Size(120, 40);
+            this.Btn_Editar.Text = "Editar";
+            this.Btn_Editar.UseVisualStyleBackColor = true;
+            // 
+            // Btn_LimparFiltros
+            // 
+            this.Btn_LimparFiltros.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.Btn_LimparFiltros.Location = new System.Drawing.Point(417, 120);
+            this.Btn_LimparFiltros.Name = "Btn_LimparFiltros";
+            this.Btn_LimparFiltros.Size = new System.Drawing.Size(150, 40);
+            this.Btn_LimparFiltros.Text = "Limpar Filtros";
+            this.Btn_LimparFiltros.UseVisualStyleBackColor = true;
             // 
             // Btn_Voltar
             // 
@@ -141,11 +164,30 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(896, 399);
+            this.dataGridView1.Size = new System.Drawing.Size(896, 369);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tssStatusLabel});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 574);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(950, 26);
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // tssStatusLabel
+            // 
+            this.tssStatusLabel.Name = "tssStatusLabel";
+            this.tssStatusLabel.Size = new System.Drawing.Size(60, 20);
+            this.tssStatusLabel.Text = "Pronto.";
             // 
             // Frm_ConsultaLivro
             // 
             this.ClientSize = new System.Drawing.Size(950, 600);
+            this.Controls.Add(this.statusStrip1); // <-- A LINHA QUE FALTAVA
+            this.Controls.Add(this.Btn_LimparFiltros);
+            this.Controls.Add(this.Btn_Editar);
             this.Controls.Add(this.Btn_Voltar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Btn_Excluir);
@@ -163,6 +205,8 @@
             this.Text = "Consultar Livros";
             this.Load += new System.EventHandler(this.ConsultaLivro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
@@ -179,7 +223,11 @@
         private System.Windows.Forms.ComboBox Cbx_MidiaCL;
         private System.Windows.Forms.Button Btn_Pesquisar;
         private System.Windows.Forms.Button Btn_Excluir;
+        private System.Windows.Forms.Button Btn_Editar;
+        private System.Windows.Forms.Button Btn_LimparFiltros;
         private System.Windows.Forms.Button Btn_Voltar;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel tssStatusLabel;
     }
 }

@@ -13,22 +13,18 @@ namespace RepositorioLivros
 
         private void AplicarEstiloModerno()
         {
-            // --- Paleta de Cores Consistente ---
             var corFundo = Color.FromArgb(248, 249, 250);
             var corTextoPrincipal = Color.FromArgb(33, 37, 41);
             var corDestaque = Color.FromArgb(13, 110, 253);
             var corSecundaria = Color.FromArgb(108, 117, 125);
 
-            // --- Estilo do Formulário e Painel ---
             this.BackColor = corFundo;
             this.mainTableLayoutPanel.BackColor = corFundo;
 
-            // --- Estilo do Título ---
             Lbl_AppTitle.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
             Lbl_AppTitle.ForeColor = corTextoPrincipal;
-            Lbl_AppTitle.Margin = new Padding(10, 10, 10, 40); // Margem para dar espaço abaixo do título
+            Lbl_AppTitle.Margin = new Padding(10, 10, 10, 40);
 
-            // --- Estilo dos Botões Primários ---
             var botoesPrimarios = new[] { Btn_CadastroLivro, Btn_ConsultaLivros };
             foreach (var btn in botoesPrimarios)
             {
@@ -37,15 +33,36 @@ namespace RepositorioLivros
                 btn.BackColor = corDestaque;
                 btn.ForeColor = Color.White;
                 btn.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+                btn.TextImageRelation = TextImageRelation.ImageBeforeText; // Posição do ícone
+                btn.ImageAlign = ContentAlignment.MiddleLeft;
+                btn.Padding = new Padding(10, 0, 0, 0); // Espaço entre ícone e texto
             }
 
-            // --- Estilo do Botão Secundário ---
             Btn_Sair.FlatStyle = FlatStyle.Flat;
             Btn_Sair.FlatAppearance.BorderSize = 1;
             Btn_Sair.FlatAppearance.BorderColor = corSecundaria;
             Btn_Sair.BackColor = corFundo;
             Btn_Sair.ForeColor = corSecundaria;
             Btn_Sair.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            Btn_Sair.TextImageRelation = TextImageRelation.ImageBeforeText;
+            Btn_Sair.ImageAlign = ContentAlignment.MiddleLeft;
+            Btn_Sair.Padding = new Padding(10, 0, 0, 0);
+
+            // --- MUDANÇA: ADICIONA OS ÍCONES ---
+            // Substitua 'add_icon', 'search_icon' e 'exit_icon' pelos nomes dos seus arquivos de recurso.
+            Btn_CadastroLivro.Image = ByteArrayToImage(Properties.Resources.plus1);
+            Btn_ConsultaLivros.Image = ByteArrayToImage(Properties.Resources.search);
+            Btn_Sair.Image = ByteArrayToImage(Properties.Resources.logout);
+        }
+
+
+                private Image ByteArrayToImage(byte[] byteArrayIn)
+        {
+            using (MemoryStream ms = new MemoryStream(byteArrayIn))
+            {
+                Image returnImage = Image.FromStream(ms);
+                return returnImage;
+            }
         }
 
         private void Btn_CadastroLivro_Click(object sender, System.EventArgs e)

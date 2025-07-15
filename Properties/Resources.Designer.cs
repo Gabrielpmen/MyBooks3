@@ -61,22 +61,32 @@ namespace RepositorioLivros.Properties {
         }
         
         /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        ///   Consulta um recurso localizado do tipo System.Byte[].
         /// </summary>
-        internal static System.Drawing.Bitmap Icone_livros_Png {
+        internal static byte[] logout {
             get {
-                object obj = ResourceManager.GetObject("Icone-livros-Png", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                object obj = ResourceManager.GetObject("logout", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
         /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        ///   Consulta um recurso localizado do tipo System.Byte[].
         /// </summary>
-        internal static System.Drawing.Bitmap livros_empilhados_png_Imagem_clipart_gratis {
+        internal static byte[] plus1 {
             get {
-                object obj = ResourceManager.GetObject("livros-empilhados-png-Imagem-clipart-gratis", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                object obj = ResourceManager.GetObject("plus1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Byte[].
+        /// </summary>
+        internal static byte[] search {
+            get {
+                object obj = ResourceManager.GetObject("search", resourceCulture);
+                return ((byte[])(obj));
             }
         }
     }

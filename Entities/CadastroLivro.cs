@@ -1,7 +1,11 @@
-﻿namespace RepositorioLivros.Entities
+﻿using System; // Importe para usar o Guid
+
+namespace RepositorioLivros.Entities
 {
     public class CadastroLivro
     {
+        // --- MUDANÇA: Adicionamos a propriedade ID ---
+        public Guid Id { get; set; }
         public string Titulo { get; set; }
         public string Genero { get; set; }
         public string Midia { get; set; }
@@ -12,21 +16,15 @@
         public string Autor { get; set; }
         public string Esaga { get; set; }
 
-        // Construtor padrão corrigido para inicializar as propriedades.
-        // Isso resolve os avisos CS8618.
         public CadastroLivro()
         {
-            Titulo = string.Empty;
-            Genero = string.Empty;
-            Midia = string.Empty;
-            AnoLancamento = string.Empty;
-            StatusLeitura = string.Empty;
-            AnoCompra = string.Empty;
-            Autor = string.Empty;
-            Esaga = string.Empty;
+            // Quando um novo livro é criado, ele recebe um ID único e universal.
+            Id = Guid.NewGuid();
         }
 
-        public CadastroLivro(string titulo, string genero, string midia, string anoLancamento, string statusLeitura, string anoCompra, double valorPago, string autor, string esaga)
+        // O construtor com parâmetros não precisa ser alterado, pois o construtor padrão
+        // já é chamado implicitamente e atribui o ID.
+        public CadastroLivro(string titulo, string genero, string midia, string anoLancamento, string statusLeitura, string anoCompra, double valorPago, string autor, string esaga) : this()
         {
             Titulo = titulo;
             Genero = genero;
